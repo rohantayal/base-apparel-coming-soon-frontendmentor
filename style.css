@@ -109,6 +109,7 @@ footer button{
         grid-template-rows: 200px 400px 300px;
         margin-left: 10%;
         grid-column-gap: 10%;
+        background-image: url(./images/bg-pattern-desktop.svg);
     }
 
     header img#logo{
