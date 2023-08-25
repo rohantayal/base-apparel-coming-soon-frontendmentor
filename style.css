@@ -1,0 +1,148 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 16px;
+    font-family: "Josefin Sans", Arial, Helvetica, sans-serif;
+    background: linear-gradient(135deg,hsl(0, 0%, 100%),hsl(0, 100%, 98%)),
+                linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+}
+
+header #logo{
+    margin: 10%;
+}
+
+#heroimage{
+    background-image: url(./images/hero-mobile.jpg);
+    margin-bottom: 20%;
+    max-width: 375px;
+    height: 250px;
+}
+
+main{
+    text-align: center;
+    margin: 5%;
+}
+
+main h1{
+    text-transform: uppercase;
+    letter-spacing: .5em;
+    line-height: 1.2em;
+    margin-bottom: 10%;
+}
+
+main p{
+    line-height: 1.5em;
+    color: hsl(0, 36%, 70%);
+    margin-bottom: 10%;
+}
+
+#coloredh1{
+    color: hsl(0, 36%, 70%);
+}
+
+footer{
+    margin: 5%;
+    margin-bottom: 25%;
+}
+
+footer #form{
+    display: grid;
+    grid-template-columns: 60% 20% 20%;
+    grid-template-rows: 48px 48px;
+    row-gap: 10px;;
+}
+
+footer #emailfield{
+    width: 100%;
+    padding: 1em;
+    border-radius: 2em;
+    border: solid 1.7px hsl(0, 36%, 70%);
+    border-right: 0;
+    height: 48px;
+    grid-area: 1/1/2/4;
+}
+
+footer ::placeholder{
+    color: hsl(0, 36%, 70%);
+}
+#error-icon {
+    grid-area: 1/2/2/3;
+    width: 3.5rem;
+    height: 48px;
+    align-self: center;
+    justify-self: center;
+    background-image: url(./images/icon-error.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    display: none;
+}
+
+footer button{
+    padding: .5em 2em .5em 2em;
+    background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+    border-radius: 2em;
+    height: 48px;
+    border: none;
+    grid-area: 1/3/2/4;
+    box-shadow: 0px 10px 30px -5px hsl(0, 36%, 70%);
+    transition: background-image 0.5s linear;
+}
+
+#arrowbutt:hover{
+    transform: scale(1.125, 1.125);
+}
+
+#error-msg{
+    grid-area: 2/1/3/3;
+    margin-left: 20px;
+    font-size: .8rem;
+}
+
+@media screen and (min-width: 800px){
+    body{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 200px 400px 300px;
+        margin-left: 10%;
+        grid-column-gap: 10%;
+    }
+
+    header img#logo{
+        grid-area: 1/1/2/2;
+        margin-left: 0;
+    }
+
+    #heroimage{
+        background: url(./images/hero-desktop.jpg) no-repeat;
+        background-size: cover;
+        grid-area: 1 / 2 / span 3 / span 1;
+        height: 100vh;
+        max-width: 100%;
+        
+    }
+
+    main{
+        grid-area: 2/1/3/2;
+        justify-self: left;
+        text-align: left;
+        margin-left: 0;
+    }
+
+    main h1{
+        font-size: 48px;
+    }
+    main p{
+        font-size: 19px;
+    }
+
+    footer{
+        grid-area: 3/1/4/2;
+        margin-left:0;
+    }
+
+    
+}
